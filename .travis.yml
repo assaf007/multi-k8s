@@ -20,5 +20,3 @@ after_success:
   - docker push assaf007/multi-nginx
   - docker push assaf007/multi-server
   - docker push assaf007/multi-worker
-
-
