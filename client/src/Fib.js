@@ -35,19 +35,7 @@ class Fib extends Component {
   };
 
   renderSeenIndexes() {
-
-
-
-    //Notice we are using the return value of the map function itself.
-    //currentState = testArray.map((value) => value)
-
-    let testNumber = [];
-
-    let currentIn = this.state.seenIndexes.map(({ testNumber }) => testNumber).join(', ');
-    return currentIn;
-
-
-    //return this.state.seenIndexes.map(({ number }) => number).join(', ');
+    return this.state.seenIndexes.map(({ number }) => number).join(', ');
   }
 
   renderValues() {
