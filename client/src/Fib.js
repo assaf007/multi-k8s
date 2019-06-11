@@ -8,15 +8,6 @@ class Fib extends Component {
     index: ''
   };
 
-  constructor() {
-    super();
-    this.state = {
-      seenIndexes: [],
-      values: {},
-      index: ''
-    };
-  }
-
   componentDidMount() {
     this.fetchValues();
     this.fetchIndexes();
@@ -44,8 +35,19 @@ class Fib extends Component {
   };
 
   renderSeenIndexes() {
-    //this.state.seenIndexes = Array.from(this.state.seenIndexes.data);
-    return this.state.seenIndexes.map(([ number ]) => [number]).join(', ');
+
+
+
+    //Notice we are using the return value of the map function itself.
+    //currentState = testArray.map((value) => value)
+
+    let testNumber = [];
+
+    let currentIn = this.state.seenIndexes.map(({ testNumber }) => testNumber).join(', ');
+    return currentIn;
+
+
+    //return this.state.seenIndexes.map(({ number }) => number).join(', ');
   }
 
   renderValues() {
