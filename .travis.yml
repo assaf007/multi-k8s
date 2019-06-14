@@ -20,16 +20,16 @@ after_success:
   - docker push assaf007/multi-nginx
   - docker push assaf007/multi-server
   - docker push assaf007/multi-worker
-
-deploy:
-  provider: elasticbeanstalk
-  region: eu-central-1
-  app: multi-docker-react
-  env: MultiDockerReact-env
-  bucket_name: elasticbeanstalk-eu-central-1-688121820106
-  bucket_path: docker-multi
-  on:
-    branch: master
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key:
-    secure: $AWS_SECRET_KEY
+# Deploy to AWS
+#deploy:
+  #provider: elasticbeanstalk
+  #region: eu-central-1
+  #app: multi-docker-react
+  #env: MultiDockerReact-env
+  #bucket_name: elasticbeanstalk-eu-central-1-688121820106
+  #bucket_path: docker-multi
+  #on:
+    #branch: master
+  #access_key_id: $AWS_ACCESS_KEY
+  #secret_access_key:
+    #secure: $AWS_SECRET_KEY
